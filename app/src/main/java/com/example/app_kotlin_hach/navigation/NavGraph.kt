@@ -9,13 +9,25 @@ import com.example.app_kotlin_hach.ui.linkedin.LinkedInScreen
 import com.example.app_kotlin_hach.ui.weather.WeatherScreen
 
 @Composable
-fun AppNavigation() {
+fun AppNavigation(onToggleTheme: () -> Unit) {
+
     val navController = rememberNavController()
 
-    NavHost(navController, startDestination = "home") {
-        composable("home") { HomeScreen(navController) }
-        composable("linkedin") { LinkedInScreen() }
-        composable("weather") {  WeatherScreen() }
-        //composable("projects") { ProjectsScreen(navController) }
+    NavHost(navController = navController, startDestination = "home") {
+
+        composable("home") {
+            HomeScreen(
+                navController = navController,
+                onToggleTheme = onToggleTheme
+            )
+        }
+
+        composable("linkedin") {
+            LinkedInScreen()
+        }
+
+        composable("weather") {
+            WeatherScreen()
+        }
     }
 }
