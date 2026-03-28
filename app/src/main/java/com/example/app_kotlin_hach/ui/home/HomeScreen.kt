@@ -24,7 +24,7 @@ fun HomeScreen(
 ) {
 
     val items = listOf(
-        HomeItem("Ver proyectos", "projects"),
+        HomeItem("Login", "login"),
         HomeItem("Clima", "weather"),
         HomeItem("Perfil", "linkedin")
     )

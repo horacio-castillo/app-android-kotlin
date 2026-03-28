@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.app_kotlin_hach.ui.home.HomeScreen
 import com.example.app_kotlin_hach.ui.linkedin.LinkedInScreen
+import com.example.app_kotlin_hach.ui.login.LoginScreen
 import com.example.app_kotlin_hach.ui.weather.WeatherScreen
 
 @Composable
@@ -28,6 +29,10 @@ fun AppNavigation(onToggleTheme: () -> Unit) {
 
         composable("weather") {
             WeatherScreen()
+        }
+
+        composable("login") {
+            LoginScreen()
         }
     }
 }
