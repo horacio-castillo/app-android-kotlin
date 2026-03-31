@@ -2,6 +2,7 @@ package com.example.app_kotlin_hach.data.remote
 
 
 import com.example.app_kotlin_hach.data.model.WeatherResponse
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,5 +12,5 @@ interface WeatherApi {
         @Query("q") city: String,
         @Query("appid") apiKey: String,
         @Query("units") unit: String = "metric"
-    ): WeatherResponse
+    ): Response<WeatherResponse>
 }
